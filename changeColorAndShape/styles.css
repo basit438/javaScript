@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    animation: gradient 5s infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.shape-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#shape-container {
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease;
+}
+
+.shape {
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: green;
+    border-radius: 50%;
+}
+
+.rectangle {
+    width: 150px;
+    height: 100px;
+    background: purple;
+}
+
+.diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: orange;
+    position: relative;
+    top: -50px;
+}
+
+.diamond::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: orange;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.styled-button:hover {
+    background: linear-gradient(to right, #5b86e5, #36d1dc);
+    transform: scale(1.1);
+}
